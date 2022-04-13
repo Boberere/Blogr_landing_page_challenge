@@ -22,6 +22,7 @@ body {
 	position: relative;
 	font-size: 1.6rem;
 	font-family: 'Overpass', sans-serif;
+	overflow-x: hidden;
 }
 .wrapper {
 	width: 100%;
@@ -387,6 +388,42 @@ body {
 .blockActive {
 	display: block;
 }
+@media (max-width: 310px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		height: 600px;
+		width: 100%;
+		border-bottom-left-radius: 90px;
+		overflow: hidden;
+		&__bg-img {
+			@include absoluteAlign;
+			background-image: url('../images/bg-pattern-intro-mobile.svg');
+			background-position: -330px -245px;
+			background-repeat: no-repeat;
+			z-index: -1;
+		}
+		&__bg-color {
+			@include absoluteAlign;
+			background-image: $header-gradient;
+			z-index: -2;
+		}
+		.wrapper {
+			.header-items {
+				&__bottom {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					width: 375px;
+					z-index: 20;
+				}
+			}
+		}
+	}
+}
 
 @media (min-width: 576px) {
 	.footer {
@@ -547,7 +584,7 @@ body {
 		}
 		.wrapper {
 			display: grid;
-		grid-template-columns: 100px minmax(560px, 1fr) 100px 1fr minmax(30px, 100px);
+			grid-template-columns: 100px minmax(560px, 1fr) 100px 1fr minmax(30px, 100px);
 			.dark-section-items {
 				display: flex;
 				flex-direction: column;
