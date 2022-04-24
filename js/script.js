@@ -19,6 +19,7 @@ const burgerArrow1 = document.querySelector('.burger-arrow1')
 const burgerArrow2 = document.querySelector('.burger-arrow2')
 const burgerArrow3 = document.querySelector('.burger-arrow3')
 
+const burgerArrow = [burgerArrow1, burgerArrow2, burgerArrow3]
 const openMenu = () => {
 	burgerBtnBurger.classList.toggle('disabled')
 	burgerBtnClose.classList.toggle('blockActive')
@@ -26,7 +27,6 @@ const openMenu = () => {
 	const burgerMenuList = [burgerMenuList1, burgerMenuList2, burgerMenuList3]
 	burgerMenuList.forEach(item => item.classList.remove('active'))
 	if (burgerBtnBurger.classList.contains('disabled')) {
-		const burgerArrow = [burgerArrow1, burgerArrow2, burgerArrow3]
 		burgerArrow.forEach(item => (item.style.transform = 'rotate(0deg)'))
 	}
 }
@@ -35,6 +35,7 @@ const burgerHandles = (x, y, z, arrow) => {
 	y.classList.remove('active')
 	z.classList.remove('active')
 	if (x.classList.contains('active')) {
+		burgerArrow.forEach(item => (item.style.transform = 'rotate(0deg)'))
 		arrow.style.transform = 'rotate(180deg)'
 	} else {
 		arrow.style.transform = 'rotate(0deg)'
