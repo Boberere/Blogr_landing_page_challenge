@@ -131,6 +131,7 @@ body {
   padding-top: 20px;
   font-size: 2rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .nav .wrapper .nav-items .nav-items__burger-menu__burger-window-item .burger-arrow {
@@ -138,10 +139,13 @@ body {
   padding-bottom: 1px;
 }
 
-.nav .wrapper .nav-items .nav-items__burger-menu__burger-window-list {
+.nav .wrapper .nav-items .nav-items__burger-menu__burger-window .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.nav .wrapper .nav-items .nav-items__burger-menu__burger-window-list {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
