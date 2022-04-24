@@ -24,6 +24,7 @@ body {
 }
 
 .wrapper {
+  overflow-x: hidden;
   width: 100%;
   max-width: 1440px;
 }
@@ -71,17 +72,35 @@ body {
 
 .nav .wrapper .nav-items .nav-items__burger-menu__burger-btn {
   position: relative;
-  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 60px;
+  width: 75px;
   -webkit-transform: translateX(15px);
           transform: translateX(15px);
   background: none;
-  border: rgba(0, 0, 0, 0);
   cursor: pointer;
   z-index: 100;
 }
 
 .nav .wrapper .nav-items .nav-items__burger-menu__burger-btn__close-icon {
   display: none;
+}
+
+.nav .wrapper .nav-items .nav-items__burger-menu__burger-btn .blockActive {
+  display: block;
+}
+
+.nav .wrapper .nav-items .nav-items__burger-menu__burger-btn .disabled {
+  display: none;
+  opacity: 0%;
 }
 
 .nav .wrapper .nav-items .nav-items__burger-menu__burger-window {
@@ -123,6 +142,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -184,6 +204,14 @@ body {
 .nav .wrapper .nav-items .nav-items__burger-menu__burger-window-sign-up-btn:hover {
   background-image: none;
   background-color: #ff7a85;
+}
+
+.nav .wrapper .nav-items .nav-items__burger-menu .flexActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: showBurger 2s ease-in forwards;
+          animation: showBurger 2s ease-in forwards;
 }
 
 .header {
@@ -328,7 +356,7 @@ body {
 }
 
 .white-section .wrapper .white-section-items--second {
-  padding: 40px;
+  padding: 40px 0px;
 }
 
 .white-section .wrapper .white-section-items__img {
@@ -369,16 +397,6 @@ body {
           justify-content: center;
 }
 
-.dark-section__smartphones-img {
-  position: absolute;
-  top: -280px;
-}
-
-.dark-section__smartphones-img img {
-  -webkit-transform: scale(70%);
-          transform: scale(70%);
-}
-
 .dark-section__bg-img {
   border-top-right-radius: 90px;
   border-bottom-left-radius: 90px;
@@ -404,6 +422,13 @@ body {
   height: 100%;
   background-image: linear-gradient(150deg, #2c2d3f 0%, #3f4164 100%);
   z-index: -2;
+}
+
+.dark-section .wrapper .dark-section-items__smartphones-img {
+  position: absolute;
+  top: -280px;
+  -webkit-transform: scale(70%) translateX(-50%);
+          transform: scale(70%) translateX(-50%);
 }
 
 .dark-section .wrapper .dark-section-items__section-title {
@@ -478,20 +503,6 @@ body {
 .attribution a {
   color: white;
   margin-right: 30px;
-}
-
-.flexActive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.disabled {
-  display: none;
-}
-
-.blockActive {
-  display: block;
 }
 
 @media (max-width: 310px) {

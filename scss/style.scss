@@ -4,6 +4,9 @@
 //////////////////////////////
 // NORMALIZATION //
 //////////////////////////////
+// * {
+// 	border: 1px solid black;
+// }
 *,
 *::before,
 *::after {
@@ -25,6 +28,7 @@ body {
 	overflow-x: hidden;
 }
 .wrapper {
+	overflow-x: hidden;
 	width: 100%;
 	max-width: 1440px;
 }
@@ -60,20 +64,29 @@ body {
 			.nav-items__burger-menu {
 				&__burger-btn {
 					position: relative;
-					padding: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 60px;
+					width: 75px;
 					transform: translateX(15px);
 					background: none;
-					border: rgba(0, 0, 0, 0);
 					cursor: pointer;
 					z-index: 100;
 					&__close-icon {
 						display: none;
 					}
+					.blockActive {
+						display: block;
+					}
+					.disabled {
+						display: none;
+						opacity: 0%;
+					}
 				}
 				&__burger-window {
 					position: absolute;
 					display: none;
-					// display: flex;
 					flex-direction: column;
 					align-items: center;
 					top: 80px;
@@ -97,6 +110,7 @@ body {
 					}
 					&-list {
 						display: flex;
+						display: none;
 						flex-direction: column;
 						align-items: center;
 						justify-content: center;
@@ -146,6 +160,10 @@ body {
 							background-color: hsl(355, 100%, 74%);
 						}
 					}
+				}
+				.flexActive {
+					display: flex;
+					animation: showBurger 2s ease-in forwards 
 				}
 			}
 		}
@@ -249,7 +267,7 @@ body {
 			align-items: center;
 			text-align: center;
 			&--second {
-				padding: 40px;
+				padding: 40px 0px;
 			}
 			&__img {
 				padding-bottom: 50px;
@@ -286,13 +304,6 @@ body {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	&__smartphones-img {
-		position: absolute;
-		top: -280px;
-		img {
-			transform: scale(70%);
-		}
-	}
 	&__bg-img {
 		border-top-right-radius: 90px;
 		border-bottom-left-radius: 90px;
@@ -312,6 +323,13 @@ body {
 	}
 	.wrapper {
 		.dark-section-items {
+			&__smartphones-img {
+				position: absolute;
+				top: -280px;
+				
+				
+				transform: scale(70%) translateX(-50%);
+			}
 			&__section-title {
 				padding-top: 205px;
 				font-size: 4rem;
@@ -379,15 +397,20 @@ body {
 	margin-right: 30px;
 }
 
-.flexActive {
-	display: flex;
-}
-.disabled {
-	display: none;
-}
-.blockActive {
-	display: block;
-}
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+// ----------- tablet / desktop version -----------
+///////////////////////////////////////////////////////
 @media (max-width: 310px) {
 	.header {
 		display: flex;
