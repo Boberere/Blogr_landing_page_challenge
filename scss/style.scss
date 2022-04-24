@@ -21,6 +21,7 @@ html {
 	font-size: 62.5%;
 }
 body {
+	width: 100%;
 	background-color: #fafafa;
 	position: relative;
 	font-size: 1.6rem;
@@ -299,49 +300,61 @@ body {
 // MAIN // DARK SECTION
 //////////////////////////////
 .dark-section {
-	position: relative;
-	margin: 200px 0 0;
-	padding: 0 25px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
 	overflow-x: hidden;
-	&__bg-img {
-		border-top-right-radius: 90px;
-		border-bottom-left-radius: 90px;
-		@include absoluteAlign;
-		background-repeat: no-repeat;
-		background-size: 600px 600px;
-		background-position: center -250px;
-		z-index: -1;
-		background-image: url('../images/bg-pattern-circles.svg');
-	}
-	&__bg-color {
-		border-top-right-radius: 90px;
-		border-bottom-left-radius: 90px;
-		@include absoluteAlign;
-		background-image: $body-gradient;
-		z-index: -2;
-	}
-	.wrapper {
-		.dark-section-items {
-			&__smartphones-img {
+	padding: 180px 0 0px;
+	.dark-section-items {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+		&__bg {
+			&-color {
+				border-top-right-radius: 90px;
+				border-bottom-left-radius: 90px;
+				@include absoluteAlign;
+				background-image: $body-gradient;
+				z-index: -2;
+			}
+		}
+		.wrapper {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			.dark-section-img {
+				border-top-right-radius: 90px;
+				border-bottom-left-radius: 90px;
+				@include absoluteAlign;
+				background-repeat: no-repeat;
+				background-size: 600px 600px;
+				background-position: center -250px;
+				z-index: -1;
+				background-image: url('../images/bg-pattern-circles.svg');
+			}
+			.dark-section-smartphones {
 				position: absolute;
 				top: -280px;
-
-				transform: scale(70%) translateX(-50%);
+				left: 50%;
+				transform: translateX(-50%) scale(70%);
 			}
-			&__section-title {
-				padding-top: 205px;
-				font-size: 4rem;
-				color: $white-text;
-			}
-			&__p {
-				margin-bottom: 100px;
-				padding-top: 25px;
-				color: $white-text;
-				font-size: 1.8rem;
-				line-height: 3rem;
+			.dark-section-text {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				text-align: center;
+				padding: 0 25px;
+				&__section-title {
+					padding-top: 205px;
+					font-size: 4rem;
+					color: $white-text;
+				}
+				&__p {
+					margin-bottom: 40px;
+					padding-top: 25px;
+					color: $white-text;
+					font-size: 1.8rem;
+					line-height: 3rem;
+				}
 			}
 		}
 	}
@@ -445,6 +458,9 @@ body {
 	.footer {
 		.attribution {
 			flex-direction: row;
+			p {
+				margin: 0 10px;
+			}
 		}
 		.wrapper {
 			.footer-item {
@@ -584,45 +600,46 @@ body {
 		}
 	}
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
 	.dark-section {
-		margin-top: 0;
-		height: 450px;
-		position: relative;
-		&__smartphones-img {
-			z-index: 100;
-			position: absolute;
-			top: 55%;
-			left: 200px;
-			transform: translateY(-50%);
-			img {
-				transform: scale(1.1);
-			}
-		}
-		&__bg-img {
-			background-size: 1000px 1000px;
-			background-position: -250px -450px;
-			z-index: -1;
-			background-image: url('../images/bg-pattern-circles.svg');
-		}
-		.wrapper {
-			display: grid;
-			grid-template-columns: 100px minmax(560px, 1fr) 100px 1fr minmax(30px, 100px);
-			.dark-section-items {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				text-align: left;
-				grid-column: -3/4;
-				&__section-title {
-					padding-top: 0;
+		padding: 110px 0 110px;
+		.dark-section-items {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			.wrapper {
+				display: grid;
+				grid-template-columns: 100px minmax(560px, 1fr) 100px 1fr minmax(30px, 100px);
+				.dark-section-img {
+					background-size: 1000px 1000px;
+					background-position: -160px -490px;
+					z-index: -1;
+					background-image: url('../images/bg-pattern-circles.svg');
 				}
-				&__p {
-					margin-bottom: 0;
+				.dark-section-smartphones {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateX(10%) translateY(-47%) scale(100%);
+				}
+				.dark-section-text {
+					grid-column: -3/4;
+					padding: 100px 0 110px;
+					align-items: flex-start;
+					text-align: left;
+					&__section-title {
+						padding-top: 0px;
+					}
+					&__p {
+						margin-bottom: 0px;
+					}
 				}
 			}
 		}
 	}
+}
+@media (min-width: 1200px) {
 	.white-section {
 		display: flex;
 		justify-content: center;
