@@ -35,8 +35,9 @@ const burgerHandles = (x, y, z, arrow) => {
 	y.classList.remove('active')
 	z.classList.remove('active')
 	if (x.classList.contains('active')) {
-		burgerArrow.forEach(item => (item.style.transform = 'rotate(0deg)'))
+		burgerArrow.forEach(item => item.style.transform = 'rotate(0deg)')
 		arrow.style.transform = 'rotate(180deg)'
+		arrow.style.padding = '3px 0px 0px'
 	} else {
 		arrow.style.transform = 'rotate(0deg)'
 	}
