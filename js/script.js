@@ -89,7 +89,7 @@ const closeAllMenu = () => {
 menuBtnProduct.addEventListener('click', () => openDesktopMenu(menuProductWindow, menuCompanyWindow, menuConnectWindow, menuProductArrow))
 menuBtnCompany.addEventListener('click', () => openDesktopMenu(menuCompanyWindow, menuProductWindow, menuConnectWindow, menuCompanyArrow))
 menuBtnConnect.addEventListener('click', () => openDesktopMenu(menuConnectWindow, menuCompanyWindow, menuProductWindow, menuConnectArrow))
-header.addEventListener('click', closeAllMenu)
+header.addEventListener('click', closeAllMenu, {capture: true})
 for (const items of menuItemLinks) {
 	items.addEventListener('click', closeAllMenu)
 }

@@ -15,6 +15,7 @@ button {
 	border: rgba(0, 0, 0, 0);
 }
 html {
+	scroll-behavior: smooth;
 	font-size: 62.5%;
 }
 body {
@@ -212,29 +213,32 @@ body {
 								text-decoration: underline 2px;
 							}
 							&-arrow {
+								transition: transform .1s;
 								margin-left: 5px;
 							}
 						}
 						&-window {
 							display: flex;
-							opacity: 100;
+							opacity: 0;
 							position: absolute;
 							width: 150px;
-							top: -300px;
+							top: 60px;
 							left: 0;
 							flex-direction: column;
 							justify-content: center;
 							border-radius: 5px;
 							padding: 20px;
 							background-color: $white-text;
-							transition: transform .3s, opacity .3s;
+							z-index: 1200;
+							transform: translateY(-350px);
+							transition: opacity .3s, transform .2s;
 							&-link {
 								font-family: 'Overpass', sans-serif;
 								position: relative;
 								padding: 10px 0;
 								text-decoration: none;
 								color: $headings;
-								z-index: 120;
+								z-index: 1200;
 								&:hover {
 									font-weight: bold;
 								}
@@ -242,7 +246,7 @@ body {
 						}
 						&-window-active {
 							opacity: 100%;
-							top: 60px;
+							transform: translateY(0);
 						}
 					}
 				}
