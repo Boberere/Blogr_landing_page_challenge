@@ -2,18 +2,22 @@
 
 This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+## Live link: 
+https://boberere.github.io/Blogr_landing_page_challenge/
+
 ## Table of contents
 
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-### Built with
+### Stack:
 
 - HTML5
-- CSS
-- Flexbox
-- CSS Grid
+- SCSS & BEM
+  - Flexbox
+  - Grid
+- JavaScript
 - Mobile-first workflow
 
 ### What I learned
@@ -25,9 +29,9 @@ I gained knowledge of:
 - making html structure
 - using CSS Flexbox and Grid
 - using BEM
-- and many more
+- using JavaScript
 
-This project isn't perfect and I know it, but I am happy I did it. In the future I will add JavaScript code and finish this project.
+This project isn't perfect and I know it, but I am happy I did it.
 
 ## Author
 

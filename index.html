@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | [Blogr]</title>
+  <title>Blogr - Frontend Mentor Challenge</title>
+  <meta name="description" content="">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,66 +20,89 @@
 <body>
   <nav class="nav">
     <div class="wrapper">
-      <div class="nav-items">
-        <div class="nav-items__desktop-menu">
-          <img src="./images/logo.svg" alt="blogr logo" class="nav-items__desktop-menu-logo">
-          <button class="nav-items__desktop-menu-item">Product <img src="./images/icon-arrow-light.svg" alt="arrow icon"
-              class="arrow"></button>
-          <button class="nav-items__desktop-menu-item">Company <img src="./images/icon-arrow-light.svg" alt="arrow icon"
-              class="burger-arrow"></button>
-          <button class="nav-items__desktop-menu-item">Connect <img src="./images/icon-arrow-light.svg" alt="arrow icon"
-              class="burger-arrow"></button>
-        </div>
-        <div class="nav-items__sign-up">
-          <p class="nav-items__sign-up-login">Login</p>
-          <button class="nav-items__sign-up-btn">Sign Up</button>
-        </div>
+      <!-- ------------- DESKTOP NAVIGATION  ------------- -->
+      <div class="nav__menu">
+        <div class="nav__menu-items"> <img src="./images/logo.svg" alt="blogr logo" class="nav__menu-items-logo">
 
-        <div class="nav-items__burger-menu">
-          <button class="nav-items__burger-menu__burger-btn">
-            <img src="./images/icon-hamburger.svg" alt="burger icon"
-              class="nav-items__burger-menu__burger-btn__burger-icon">
-            <img src="./images/icon-close.svg" alt="close icon" class="nav-items__burger-menu__burger-btn__close-icon">
-          </button>
-
-          <div class="nav-items__burger-menu__burger-window">
-            <p class="nav-items__burger-menu__burger-window-item burger-item1">Product <img src="./images/icon-arrow-dark.svg"
-                alt="arrow icon" class="burger-arrow burger-arrow1"></p>
-            <div class="nav-items__burger-menu__burger-window-list burger-list1">
-
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Overview</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Pricing</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Marketplace</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Features</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Integrations</a>
-
+          <div class="nav__menu-items-column"><button class="nav__menu-items-column-item nav__menu-items-column-item--product">Product <img
+                src="./images/icon-arrow-light.svg" alt="arrow icon"
+                class="nav__menu-items-column-item-arrow nav__menu-items-column-item-arrow--product"></button>
+            <div class="nav__menu-items-column-window nav_menu-items-column-window--product">
+              <a href="#" class="nav__menu-items-column-window-link">Overview</a>
+              <a href="#" class="nav__menu-items-column-window-link">Pricing</a>
+              <a href="#" class="nav__menu-items-column-window-link">Marketplace</a>
+              <a href="#" class="nav__menu-items-column-window-link">Features</a>
+              <a href="#" class="nav__menu-items-column-window-link">Integrations</a>
             </div>
-
-            <p class="nav-items__burger-menu__burger-window-item burger-item2">Company <img src="./images/icon-arrow-dark.svg"
-                alt="arrow icon" class="burger-arrow burger-arrow2"></p>
-            <div class="nav-items__burger-menu__burger-window-list burger-list2">
-
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">About</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Team</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Blog</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Careers</a>
-
-            </div>
-
-            <p class="nav-items__burger-menu__burger-window-item burger-item3">Connect <img src="./images/icon-arrow-dark.svg"
-                alt="arrow icon" class="burger-arrow burger-arrow3"></p>
-            <div class="nav-items__burger-menu__burger-window-list burger-list3">
-
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Contact</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">Newsletter</a>
-              <a href="#" class="nav-items__burger-menu__burger-window-list-item">LinkedIn</a>
-
-            </div>
-            <div class="hr"></div>
-            <p class="nav-items__burger-menu__burger-window-login">Login</p>
-            <button class="nav-items__burger-menu__burger-window-sign-up-btn">Sign Up</button>
           </div>
+          <div class="nav__menu-items-column"><button class="nav__menu-items-column-item nav__menu-items-column-item--company">Company <img
+                src="./images/icon-arrow-light.svg" alt="arrow icon"
+                class="nav__menu-items-column-item-arrow nav__menu-items-column-item-arrow--company"></button>
+            <div class="nav__menu-items-column-window nav_menu-items-column-window--company">
+              <a href="#" class="nav__menu-items-column-window-link">About</a>
+              <a href="#" class="nav__menu-items-column-window-link">Team</a>
+              <a href="#" class="nav__menu-items-column-window-link">Blog</a>
+              <a href="#" class="nav__menu-items-column-window-link">Careers</a>
+            </div>
+          </div>
+          <div class="nav__menu-items-column"><button class="nav__menu-items-column-item nav__menu-items-column-item--connect">Connect <img
+                src="./images/icon-arrow-light.svg" alt="arrow icon"
+                class="nav__menu-items-column-item-arrow nav__menu-items-column-item-arrow--connect"></button>
+            <div class="nav__menu-items-column-window nav_menu-items-column-window--connect">
+              <a href="#" class="nav__menu-items-column-window-link">Contact</a>
+              <a href="#" class="nav__menu-items-column-window-link">Newsletter</a>
+              <a href="#" class="nav__menu-items-column-window-link">LinkedIn</a>
+            </div>
+          </div>
+
+
         </div>
+        <button class="nav__menu-btn">Sign Up</button>
+        <button class="nav__menu-burger-btn">
+          <img src="./images/icon-hamburger.svg" alt="burger icon" class="nav__menu-burger-btn-icon">
+          <img src="./images/icon-close.svg" alt="close icon" class="nav__menu-burger-btn-close-icon">
+        </button>
+      </div>
+      <!-- ------------- BURGER MENU  ------------- -->
+      <div class="nav__burger-menu">
+        <button class="nav__burger-menu-btns nav__burger-menu-btns--product">Product <img
+            src="./images/icon-arrow-dark.svg" alt="arrow icon"
+            class="nav__burger-menu-btns-arrow nav__burger-menu-btns-arrow--product"></button>
+        <div class="nav__burger-menu-items nav__burger-menu-items--product">
+
+          <a href="#" class="nav__burger-menu-items-item">Overview</a>
+          <a href="#" class="nav__burger-menu-items-item">Pricing</a>
+          <a href="#" class="nav__burger-menu-items-item">Marketplace</a>
+          <a href="#" class="nav__burger-menu-items-item">Features</a>
+          <a href="#" class="nav__burger-menu-items-item">Integrations</a>
+
+        </div>
+
+        <button class="nav__burger-menu-btns nav__burger-menu-btns--company">Company <img
+            src="./images/icon-arrow-dark.svg" alt="arrow icon"
+            class="nav__burger-menu-btns-arrow nav__burger-menu-btns-arrow--company"></button>
+        <div class="nav__burger-menu-items nav__burger-menu-items--company">
+
+          <a href="#" class="nav__burger-menu-items-item">About</a>
+          <a href="#" class="nav__burger-menu-items-item">Team</a>
+          <a href="#" class="nav__burger-menu-items-item">Blog</a>
+          <a href="#" class="nav__burger-menu-items-item">Careers</a>
+
+        </div>
+
+        <button class="nav__burger-menu-btns nav__burger-menu-btns--connect">Connect <img
+            src="./images/icon-arrow-dark.svg" alt="arrow icon"
+            class="nav__burger-menu-btns-arrow nav__burger-menu-btns-arrow--connect"></button>
+        <div class="nav__burger-menu-items nav__burger-menu-items--connect">
+
+          <a href="#" class="nav__burger-menu-items-item">Contact</a>
+          <a href="#" class="nav__burger-menu-items-item">Newsletter</a>
+          <a href="#" class="nav__burger-menu-items-item">LinkedIn</a>
+
+        </div>
+        <div class="nav__burger-menu-line"></div>
+        <p class="nav__burger-menu-login">Login</p>
+        <button class="nav__burger-menu-sign-up-btn">Sign Up</button>
       </div>
     </div>
   </nav>
